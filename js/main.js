@@ -335,16 +335,8 @@ function initModal() {
                 'ambas': 'Ambas as aulas - R$ 60,00'
             };
             
-            // Criar mensagem para WhatsApp (sem emojis para evitar caracteres quebrados)
-            const mensagem = [
-                'Olá! Gostaria de me inscrever no *Treinão do Bem*',
-                '',
-                `Nome: ${nome}`,
-                `Telefone: ${telefone}`,
-                `Aula escolhida: ${aulaTexto[aulaEscolhida]}`,
-                '',
-                'Aguardo confirmação!'
-            ].join('\n');
+            // WhatsApp: enviar apenas Número/WhatsApp
+            const mensagem = `Número/WhatsApp: ${telefoneDigits}`;
             
             // Abrir WhatsApp com mensagem preenchida
             const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
