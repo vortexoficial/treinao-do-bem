@@ -651,13 +651,12 @@
             <p class="modal-subtitle">Preencha os dados e finalize sua inscrição no WhatsApp</p>
             
             <form id="form-inscricao" class="inscricao-form">
-                <div class="form-group">
+                <div class="form-group form-floating">
+                    <input type="text" id="nome" name="nome" required placeholder=" ">
                     <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
                 </div>
                 
-                <div class="form-group">
-                    <label for="telefone">Telefone/WhatsApp</label>
+                <div class="form-group form-floating">
                     <input
                         type="tel"
                         id="telefone"
@@ -665,12 +664,13 @@
                         required
                         inputmode="tel"
                         autocomplete="tel"
-                        placeholder="(00) 00000-0000"
+                        placeholder=" "
                         minlength="15"
                         maxlength="15"
                         pattern="\(\d{2}\) \d{5}-\d{4}"
                         title="Digite um celular com DDD: (00) 00000-0000"
                     >
+                    <label for="telefone">Telefone/WhatsApp (00) 00000-0000</label>
                 </div>
                 
                 <div class="form-group">
