@@ -1,0 +1,7 @@
+<!-- LOGO PLACEHOLDER: Quiron Jornada Empresarial -->
+<!-- Trocar este arquivo pelo logo real -->
+<svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 20 L15 5 L25 20 L15 35 Z" fill="#1E88E5"/>
+    <path d="M15 5 L25 20 L35 5 Z" fill="#0D47A1"/>
+    <text x="45" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0D47A1" text-anchor="start">QUIRON</text>
+</svg>

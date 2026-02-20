@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TREINÃO DO BEM - Encontro de movimento e bem-estar com propósito. 21/02 na Green House - Yoga e Zumba.">
+    <meta name="keywords" content="treinão, yoga, zumba, bem-estar, santos, gonzaga, evento">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://treinaodobem.com.br/">
+    <meta property="og:title" content="TREINÃO DO BEM - 21/02 Green House">
+    <meta property="og:description" content="Um encontro de movimento e bem-estar com propósito. Yoga e Zumba com professoras incríveis!">
+    <meta property="og:image" content="https://treinaodobem.com.br/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    
+    <title>TREINÃO DO BEM | 21/02 - Green House Santos</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    
+    <!-- Canvas Background (partículas) -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Header / Topbar -->
+    <header id="header">
+        <div class="container header-content">
+            <!-- Logos removidos conforme solicitado -->
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#programacao" class="nav-link">Programação</a>
+                <a href="#local" class="nav-link">Local</a>
+                <a href="#valores" class="nav-link">Valores</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="hero-badge mobile-only-badge">
+                <img src="assets/logos/corrente-do-bem.svg" alt="Corrente do Bem" class="badge-logo">
+                <span>Projeto Corrente do Bem</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Background Videos -->
+        <video autoplay muted loop playsinline class="hero-bg-video desktop-video">
+            <source src="assets/videos/fundodesktop.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop playsinline class="hero-bg-video mobile-video">
+            <source src="assets/videos/fundomobile.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Dark Overlay -->
+        <div class="hero-overlay-dark"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <img src="assets/logos/corrente-do-bem.svg" alt="Corrente do Bem" class="badge-logo">
+                <span>Projeto Corrente do Bem</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <img src="assets/logos/treinao.png" alt="Treinão do Bem" class="brand-logo-hero">
+            </h1>
+
+            <p class="hero-subtitle">Um encontro de movimento e bem-estar com propósito.</p>
+            
+            <div class="hero-details">
+                <div class="detail-item">
+                    <img src="assets/icons/calendar.svg" alt="Data" class="detail-icon">
+                    <span>21/02 Sábado</span>
+                </div>
+                <div class="detail-item">
+                    <img src="assets/icons/location.svg" alt="Local" class="detail-icon">
+                    <span>Green House - Santos</span>
+                </div>
+            </div>
+            
+            <div class="hero-ctas">
+                <button class="btn btn-primary btn-shine" id="btn-inscricao">
+                    <span>Garanta sua vaga</span>
+                </button>
+                <a href="#programacao" class="btn btn-secondary">Ver Programação</a>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <span>Role para saber mais</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+    
+    <!-- Sobre Section -->
+    <section id="sobre" class="section section-sobre">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Sobre o Evento</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="sobre-content reveal">
+                <div class="sobre-text">
+                    <p class="text-large">O <strong>Treinão do Bem</strong> é uma iniciativa que une movimento, saúde e solidariedade em um único evento.</p>
+                    <p>Participe de aulas incríveis de <strong>Yoga</strong> e <strong>Zumba</strong> enquanto contribui para um propósito maior. Todo o valor arrecadado será destinado ao projeto <strong>Corrente do Bem</strong>, que transforma vidas através da educação e do empreendedorismo.</p>
+                    <p>Escolha participar de 1 ou 2 aulas e venha fazer parte dessa corrente de energia positiva!</p>
+                </div>
+                
+                <div class="sobre-items-stack">
+                    <div class="sobre-item">
+                        <div class="sobre-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                        </div>
+                        <div class="sobre-info">
+                            <h4>2 Aulas Incríveis</h4>
+                            <p>Yoga e Zumba para todos os níveis</p>
+                        </div>
+                    </div>
+
+                    <div class="sobre-item">
+                        <div class="sobre-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <div class="sobre-info">
+                            <h4>100% Solidário</h4>
+                            <p>Todo lucro para o Corrente do Bem</p>
+                        </div>
+                    </div>
+
+                    <div class="sobre-item">
+                        <div class="sobre-icon-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div class="sobre-info">
+                            <h4>Com Propósito</h4>
+                            <p>Transformando vidas com esporte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programação Section -->
+    <section id="programacao" class="section section-programacao">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Programação</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Escolha sua aula ou participe das duas!</p>
+            </div>
+            
+            <div class="programacao-grid">
+                <!-- Yoga Card -->
+                <div class="programa-card reveal">
+                    <div class="programa-left">
+                        <div class="programa-icon">
+                            <img src="assets/icons/yoga.png" alt="Yoga">
+                        </div>
+                        <div class="programa-time">08:00</div>
+                    </div>
+                    <div class="programa-content">
+                        <h3 class="programa-title">Yoga</h3>
+                        <p class="programa-description">Conecte-se com seu corpo e mente através de posturas que promovem equilíbrio e bem-estar.</p>
+                        <div class="programa-instructor">
+                            <span class="instructor-label">Instrutora</span>
+                            <span class="instructor-name">Tatyana Jorge</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Zumba Card -->
+                <div class="programa-card reveal">
+                    <div class="programa-left">
+                        <div class="programa-icon">
+                            <img src="assets/icons/zumba.png" alt="Zumba">
+                        </div>
+                        <div class="programa-time">09:30</div>
+                    </div>
+                    <div class="programa-content">
+                        <h3 class="programa-title">Zumba</h3>
+                        <p class="programa-description">Movimente-se ao ritmo de músicas envolventes em uma aula cheia de energia e diversão.</p>
+                        <div class="programa-instructor">
+                            <span class="instructor-label">Instrutora</span>
+                            <span class="instructor-name">Ana Carvalho</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Local Section -->
+    <section id="local" class="section section-local">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Local</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="local-content reveal">
+                <div class="local-info">
+                    <div class="local-title-group">
+                        <span class="local-label">ESPAÇO DO EVENTO</span>
+                        <h3 class="local-name">Green House</h3>
+                    </div>
+                    
+                    <a href="https://www.google.com/maps/search/?api=1&query=Rua+Tolentino+Filgueiras+164+Gonzaga+Santos" 
+                       target="_blank" 
+                       class="local-address">
+                        <div class="address-icon-box">
+                            <!-- Clean Map Pin SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div class="address-text">
+                            <strong>Rua Tolentino Filgueiras, 164</strong>
+                            <span>Gonzaga - Santos/SP</span>
+                        </div>
+                        <!-- Little arrow right -->
+                        <div class="address-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </div>
+                    </a>
+
+                    <div class="local-actions">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Tolentino+Filgueiras+164+Gonzaga+Santos" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn btn-primary btn-full reveal-delay-1">
+                            <span>Traçar Rota</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="local-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.8982!2d-46.3326!3d-23.9615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDU3JzQxLjQiUyA0NsKwMTknNTcuNCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Valores Section -->
+    <section id="valores" class="section section-valores">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Valores</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Invista no seu bem-estar e contribua para o bem</p>
+            </div>
+            
+            <div class="valores-grid">
+                <div class="valor-card reveal">
+                    <div class="valor-header">
+                        <h3 class="valor-title">1 Aula</h3>
+                    </div>
+                    <div class="valor-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value">35</span>
+                        <span class="price-cents">,00</span>
+                    </div>
+                    <ul class="valor-features">
+                        <li>✓ Escolha: Yoga ou Zumba</li>
+                        <li>✓ 1h30 de duração</li>
+                        <li>✓ Professoras especializadas</li>
+                        <li>✓ Contribuição para o bem</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full" onclick="document.getElementById('btn-inscricao').click()">
+                        Quero participar
+                    </button>
+                </div>
+                
+                <div class="valor-card valor-card-featured reveal">
+                    <div class="valor-badge">Melhor custo-benefício</div>
+                    <div class="valor-header">
+                        <h3 class="valor-title">2 Aulas</h3>
+                    </div>
+                    <div class="valor-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value">60</span>
+                        <span class="price-cents">,00</span>
+                    </div>
+                    <div class="valor-economy">Economia de R$ 10,00</div>
+                    <ul class="valor-features">
+                        <li>✓ Yoga + Zumba</li>
+                        <li>✓ Manhã completa de bem-estar</li>
+                        <li>✓ 2 professoras incríveis</li>
+                        <li>✓ Experiência completa</li>
+                        <li>✓ Maior contribuição</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full" onclick="document.getElementById('btn-inscricao').click()">
+                        Garantir minha vaga
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Realização Section -->
+    <section id="realizacao" class="section section-realizacao">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Realização</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="realizacao-carousel reveal">
+                <div class="carousel-track">
+                    <!-- Set 1 -->
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/zaros.png" alt="Zaros Escola de Negócios">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/q84.png" alt="Q84">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/quiron.png" alt="Quiron Jornada Empresarial">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/correntedobem.png" alt="Corrente do Bem">
+                    </div>
+
+                    <!-- Set 2 -->
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/zaros.png" alt="Zaros Escola de Negócios">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/q84.png" alt="Q84">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/quiron.png" alt="Quiron Jornada Empresarial">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/correntedobem.png" alt="Corrente do Bem">
+                    </div>
+
+                    <!-- Set 3 -->
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/zaros.png" alt="Zaros Escola de Negócios">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/q84.png" alt="Q84">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/quiron.png" alt="Quiron Jornada Empresarial">
+                    </div>
+                    <div class="realizacao-logo">
+                        <img src="assets/logos/correntedobem.png" alt="Corrente do Bem">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contato Section -->
+    <section id="contato" class="section section-contato">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Garanta sua Vaga</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Entre em contato e faça sua inscrição agora</p>
+            </div>
+            
+            <div class="contato-content reveal">
+                <div class="contato-steps">
+                    <div class="contato-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="icon-animate">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Chame no WhatsApp</h3>
+                        <p>Clique no botão e inicie conversa com nossa equipe</p>
+                    </div>
+                    
+                    <div class="contato-divider">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="contato-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <polyline points="17 11 19 13 23 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Faça sua Inscrição</h3>
+                        <p>Informe seu nome e garanta sua vaga na hora</p>
+                    </div>
+
+                    <div class="contato-divider">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="contato-step">
+                        <div class="step-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                        </div>
+                        <h3>Pronto!</h3>
+                        <p>Participe desse movimento de bem-estar</p>
+                    </div>
+                </div>
+
+                <div class="contato-action">
+                          <a href="https://wa.me/5513997409393?text=Ol%C3%A1%2C%20gostaria%20de%20me%20inscrever%20no%20Trein%C3%A3o%20do%20Bem!" 
+                       class="btn btn-whatsapp btn-lg" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                        </svg>
+                        <span>INSCREVER AGORA</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Preciso ter experiência nas modalidades?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não! As aulas são abertas para todos os níveis, desde iniciantes até praticantes avançados. Nossas professoras adaptam os exercícios para cada participante.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>O que devo levar?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos: roupa confortável para prática de exercícios, tênis adequado, toalha, garrafa de água e tapete de yoga (caso tenha).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Como faço a inscrição?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Entre em contato pelo WhatsApp clicando no botão flutuante ou no botão "Garanta sua vaga". Informe seu nome e qual(is) aula(s) deseja participar.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Posso comprar no dia do evento?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, mas recomendamos fazer a inscrição antecipada para garantir sua vaga, pois as vagas são limitadas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal">
+                    <button class="faq-question">
+                        <span>Para onde vai o valor arrecadado?</span>
+                        <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>100% do valor arrecadado será destinado ao projeto Corrente do Bem, que desenvolve ações de educação e empreendedorismo social.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logos/treinao.png" alt="Treinão do Bem" class="brand-logo-footer">
+                    <p class="brand-tagline">Um encontro de movimento e bem-estar com propósito. Conectando corpo, mente e solidariedade.</p>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#programacao">Programação</a></li>
+                            <li><a href="#local">Local</a></li>
+                            <li><a href="#valores">Valores</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Ajuda</h4>
+                        <ul class="footer-links">
+                            <li><a href="#faq">Perguntas Frequentes</a></li>
+                            <li><a href="https://wa.me/5513997409393" target="_blank" rel="noopener noreferrer">Suporte WhatsApp</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Localização</h4>
+                        <ul class="footer-contact-info">
+                            <li>
+                                <svg class="icon-small" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Green House<br>Rua Tolentino Filgueiras, 164<br>Gonzaga - Santos/SP</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 Treinão do Bem. Todos os direitos reservados.</p>
+                </div>
+                <div class="developer-credit">
+                    <a href="https://wa.me/5511964956563" target="_blank" rel="noopener noreferrer" class="dev-link">
+                        Desenvolvido por <strong>FuturaDesign</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Floating Button -->
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5513997409393?text=Ol%C3%A1%2C%20gostaria%20de%20me%20inscrever%20no%20Trein%C3%A3o%20do%20Bem!" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Fale no WhatsApp"
+       title="Fale no WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/>
+        </svg>
+        <span class="whatsapp-tooltip">Fale no WhatsApp</span>
+    </a>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    
+    <!-- Modal de Inscrição -->
+    <div id="modal-inscricao" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            
+            <h2 class="modal-title">Inscrição - Treinão do Bem</h2>
+            <p class="modal-subtitle">Preencha os dados e finalize sua inscrição no WhatsApp</p>
+            
+            <form id="form-inscricao" class="inscricao-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone/WhatsApp</label>
+                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+                </div>
+                
+                <div class="form-group">
+                    <label>Escolha a(s) aula(s)</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="aula" value="yoga" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Yoga (8h) - R$ 35,00</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="aula" value="zumba" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Zumba (9h30) - R$ 35,00</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="aula" value="ambas" required>
+                            <span class="radio-custom"></span>
+                            <span class="radio-text">Ambas - R$ 60,00</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                    </svg>
+                    Finalizar inscrição no WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
