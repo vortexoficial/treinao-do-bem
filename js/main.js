@@ -574,6 +574,10 @@ function createHeartRain() {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🧘 Treinão do Bem - Iniciando...');
 
+    // Libera a renderização do conteúdo (o loader continua por cima)
+    document.documentElement.classList.remove('js-loading');
+    document.body.style.visibility = '';
+
     // Loader (2.5s) - sincronizado com CSS
     const loader = document.getElementById('page-loader');
     if (loader) {

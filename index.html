@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TREINÃO DO BEM - Encontro de movimento e bem-estar com propósito. 21/02 na Green House - Yoga e Zumba.">
     <meta name="keywords" content="treinão, yoga, zumba, bem-estar, santos, gonzaga, evento">
+
+    <script>
+        // Evita o “pisca” do conteúdo antes do loader aparecer
+        document.documentElement.classList.add('js-loading');
+
+        // Failsafe: se o JS principal não carregar, não deixa a página invisível
+        window.setTimeout(() => {
+            document.documentElement.classList.remove('js-loading');
+        }, 4000);
+    </script>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -17,6 +27,24 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
     
     <title>TREINÃO DO BEM | 21/02 - Green House Santos</title>
+
+    <style>
+        /* CSS crítico: garante loader no primeiro paint e evita flash do conteúdo */
+        html.js-loading { background: #fff; }
+        html.js-loading body { visibility: hidden; }
+        html.js-loading #page-loader {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            z-index: 99999;
+        }
+    </style>
     
     <link rel="stylesheet" href="css/styles.css">
 </head>
