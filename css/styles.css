@@ -16,8 +16,6 @@
     --gray-100: #F1F5F9;
     --gray-200: #E2E8F0;
     --gray-300: #CBD5E1;
-    --gray-400: #94A3B8; /* Adicionado para bordas mais escuras */
-    --gray-500: #64748B;
     --gray-600: #475569;
     --gray-800: #1E293B;
     --gray-900: #0F172A;
@@ -2356,7 +2354,9 @@ ul {
 .modal .inscricao-form {
     gap: 0.6rem;
 }
-1rem;
+
+.modal .form-group {
+    margin-bottom: 0.75rem;
     gap: 0;
 }
 
@@ -2366,7 +2366,6 @@ ul {
     border-radius: 6px;
     border-width: 1px;
     width: 100%;
-    border-color: var(--gray-400); /* Borda mais escura */
 }
 
 .modal .radio-label {
@@ -2377,11 +2376,8 @@ ul {
     width: 100%;
     display: flex;
     align-items: center;
-    border-color: var(--gray-400); /* Borda mais escura */
 }
 
-.modal .radio-group {
-    gap: 0.75rem; /* Mais respiro entre os radios */
 .modal .radio-group {
     gap: 0.45rem;
 }
@@ -2488,7 +2484,7 @@ ul {
     position: absolute;
     left: 0.75rem;
     top: 50%;
-    transform: transla300); /* Instruções cinza clarinho */50%);
+    transform: translateY(-50%);
     pointer-events: none;
     color: var(--gray-600);
     font-size: 1rem;
