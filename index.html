@@ -658,7 +658,19 @@
                 
                 <div class="form-group">
                     <label for="telefone">Telefone/WhatsApp</label>
-                    <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        required
+                        inputmode="tel"
+                        autocomplete="tel"
+                        placeholder="(00) 00000-0000"
+                        minlength="15"
+                        maxlength="15"
+                        pattern="\(\d{2}\) \d{5}-\d{4}"
+                        title="Digite um celular com DDD: (00) 00000-0000"
+                    >
                 </div>
                 
                 <div class="form-group">

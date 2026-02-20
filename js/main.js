@@ -302,7 +302,23 @@ function initModal() {
             e.preventDefault();
             
             const nome = document.getElementById('nome').value;
-            const telefone = document.getElementById('telefone').value;
+            const telefoneEl = document.getElementById('telefone');
+            const telefone = telefoneEl ? telefoneEl.value : '';
+            const telefoneDigits = telefone.replace(/\D/g, '');
+
+            if (telefoneEl) {
+                telefoneEl.setCustomValidity('');
+            }
+
+            // Validação: celular com DDD deve ter exatamente 11 dígitos (2 + 9)
+            if (telefoneDigits.length !== 11) {
+                if (telefoneEl) {
+                    telefoneEl.setCustomValidity('Informe um celular com DDD (11 dígitos): (00) 00000-0000');
+                    telefoneEl.reportValidity();
+                    telefoneEl.focus();
+                }
+                return;
+            }
             const aulaRadios = document.querySelectorAll('input[name="aula"]');
             let aulaEscolhida = '';
             
@@ -319,12 +335,16 @@ function initModal() {
                 'ambas': 'Ambas as aulas - R$ 60,00'
             };
             
-            // Criar mensagem para WhatsApp
-            const mensagem = `Olá! Gostaria de me inscrever no *Treinão do Bem*\n\n` +
-                           `📝 *Nome:* ${nome}\n` +
-                           `📱 *Telefone:* ${telefone}\n` +
-                           `🧘 *Aula escolhida:* ${aulaTexto[aulaEscolhida]}\n\n` +
-                           `Aguardo confirmação!`;
+            // Criar mensagem para WhatsApp (sem emojis para evitar caracteres quebrados)
+            const mensagem = [
+                'Olá! Gostaria de me inscrever no *Treinão do Bem*',
+                '',
+                `Nome: ${nome}`,
+                `Telefone: ${telefone}`,
+                `Aula escolhida: ${aulaTexto[aulaEscolhida]}`,
+                '',
+                'Aguardo confirmação!'
+            ].join('\n');
             
             // Abrir WhatsApp com mensagem preenchida
             const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
@@ -341,6 +361,11 @@ function initModal() {
     if (telefoneInput) {
         telefoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
+
+            // Limite: DDD (2) + 9 dígitos
+            if (value.length > 11) {
+                value = value.slice(0, 11);
+            }
             
             if (value.length <= 11) {
                 if (value.length <= 2) {

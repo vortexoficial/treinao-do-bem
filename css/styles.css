@@ -2331,8 +2331,23 @@ ul {
     transform: scale(0.9);
     transition: transform var(--transition-base);
     max-height: calc(100dvh - var(--spacing-md) - var(--spacing-md));
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+.modal .modal-subtitle {
+    margin-bottom: var(--spacing-md);
+}
+
+.modal .inscricao-form {
+    gap: var(--spacing-md);
+}
+
+.modal .form-group input {
+    padding: var(--spacing-sm);
+}
+
+.modal .radio-label {
+    padding: var(--spacing-sm);
 }
 
 .modal.active .modal-content {
@@ -2599,6 +2614,10 @@ ul {
     .modal-content {
         padding: var(--spacing-md);
         max-height: calc(100dvh - var(--spacing-sm) - var(--spacing-sm));
+    }
+
+    .modal-title {
+        font-size: var(--fs-xl);
     }
     
     .footer-content {
