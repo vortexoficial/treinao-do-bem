@@ -573,6 +573,16 @@ function createHeartRain() {
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🧘 Treinão do Bem - Iniciando...');
+
+    // Loader (2.5s) - sincronizado com CSS
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        document.body.style.overflow = 'hidden';
+        window.setTimeout(() => {
+            loader.classList.add('is-hidden');
+            document.body.style.overflow = '';
+        }, 2500);
+    }
     
     // Inicializar canvas de partículas
     new ParticlesCanvas();

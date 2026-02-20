@@ -103,6 +103,98 @@ body {
 }
 
 /* ===========================
+   Page Loader
+   ========================== */
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    overflow: hidden;
+    z-index: calc(var(--z-modal) + 10);
+    opacity: 0;
+    pointer-events: none;
+    animation: loaderFade 2.5s ease-in-out forwards;
+}
+
+.page-loader .loader-content {
+    width: min(520px, calc(100% - 3rem));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.loader-logo-single {
+    width: min(180px, 55vw);
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    animation: loaderIntro 2.5s ease-in-out forwards;
+}
+
+.loader-bar {
+    width: min(180px, 55vw);
+    height: 3px;
+    margin-top: 1.25rem;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--primary-blue) 25%, var(--white));
+    overflow: hidden;
+}
+
+.loader-bar-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: var(--primary-blue);
+    animation: loaderProgress 2.5s ease-in-out forwards;
+}
+
+.loader-phrase {
+    margin-top: 1rem;
+    color: color-mix(in srgb, var(--gray-600) 60%, var(--white));
+    font-weight: 700;
+    font-family: var(--font-display);
+    opacity: 0;
+    animation: loaderIntro 2.5s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+    .page-loader .loader-content {
+        width: min(520px, calc(100% - 2.25rem));
+    }
+}
+
+.page-loader.is-hidden {
+    display: none;
+}
+
+@keyframes loaderFade {
+    0% { opacity: 0; pointer-events: none; }
+    12% { opacity: 1; pointer-events: auto; }
+    82% { opacity: 1; pointer-events: auto; }
+    100% { opacity: 0; pointer-events: none; }
+}
+
+@keyframes loaderIntro {
+    0% { opacity: 0; transform: translateY(10px); }
+    18% { opacity: 1; transform: translateY(0); }
+    82% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-6px); }
+}
+
+@keyframes loaderProgress {
+    0% { width: 0%; }
+    82% { width: 100%; }
+    100% { width: 100%; }
+}
+
+/* ===========================
    Titles Typography
    ========================== */
 
